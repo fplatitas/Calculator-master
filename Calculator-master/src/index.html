@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <div class="justify-center border-2 border-stone-50 w-full h-screen container flex">
+        <div class="w-1/4 max-[640px]:w-full sm:w-3/4 md:w-1/2 lg:w-1/3 min-[1300px]:w-1/4 container h-full border-stone-50 border-2 flex flex-col">
+            <div class="container w-full h-1/3 bg-lime-500 border-stone-50 border-2">
+                <div id="input"class="w-full h-1/2"></div>
+                <div id="output"class="w-full h-1/2"></div>
+              
+
+            </div> 
+            <div class="container w-full h-2/3 border-stone-50 border-2 grid grid-cols-4 gap-1 bg-black">
+                
+                <button class=" bg-lime-400 m-2 rounded-lg"onclick="input.innerHTML=''">AC</button>
+                <button class=" bg-lime-400 m-2 rounded-lg"onclick="input.innerHTML=input.innerHTML.substring(0,input.length-1)">CE</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='%'">%</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='+'">+</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='7'">7</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='8'">8</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='9'">9</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='-'">-</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='4'">4</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='5'">5</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='6'">6</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='*'">*</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='1'">1</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='2'">2</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='3'">3</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='/'">/</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='0'" >0</button>
+                <button class=" bg-lime-400 m-2 rounded-lg" onclick="input.innerHTML+='.'">.</button>
+                <button class=" bg-lime-400 m-2 rounded-lg col-span-2"onclick="output.innerHTML=eval(input.innerHTML)">=</button>
+
+            </div>
+        </div>
+      <script src="script.js"></script>
+    </div>
+</body>
+</html>
